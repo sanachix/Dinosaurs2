@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1>
+      <img class="logo" src="https://vignette.wikia.nocookie.net/jurassicpark/images/9/96/Jurassic_Park_Logo_Black_Red_Yellow.png/revision/latest?cb=20150607192659" alt="angular logo"/>
+      <br>
+      <span class="scary_s" translate>{{title}}</span>
+    </h1>
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <q [hidden]="isLoading">{{quote}}</q>
+  </div>
+</div>
