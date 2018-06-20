@@ -10,8 +10,11 @@ import { SharedModule } from '@app/shared';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
+import { DinosaursModule} from './dinosaurs/dinosaurs.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DinosaursComponent } from './dinosaurs/dinosaurs.component';
+import { DinosaurDetailComponent } from './dinosaur-detail/dinosaur-detail.component';
 
 @NgModule({
   imports: [
@@ -25,9 +28,10 @@ import { AppRoutingModule } from './app-routing.module';
     HomeModule,
     AboutModule,
     LoginModule,
+    DinosaursModule,
     AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent,DinosaursComponent,DinosaurDetailComponent],
   providers: [
   ],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<div *ngIf = "selectedDino">
+    <h2>{{selectedDino.Name|uppercase}} Summary</h2>
+    <div><span>Name: </span>{{selectedDino.Name}}</div>
+    <div>
+      <label>Name:
+      <input [(ngModel)]="selectedDino.Name" placeholder="Name">
+      </label>
+    </div>
+  </div>

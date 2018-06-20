@@ -1,0 +1,10 @@
+<h2>Ingen Dinosaurs</h2>
+<ul>
+  <li *ngFor ="let d of dinos" (click)="onSelect(d)">
+    <span>{{d.Name}}</span> {{d.Rating}}
+  </li>
+
+</ul>
+
+
+<app-dinosaur-detail [d]="selectedDino" ></app-dinosaur-detail>
