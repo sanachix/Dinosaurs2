@@ -1,0 +1,19 @@
+li{
+    width: 400px;
+    height: 400px;
+    display:inline-flex;
+    flex-flow: row wrap;
+    position: relative;
+    margin:4px;
+ 
+}
+
+.Dinos{
+    flex: 0 1 calc(25% -8px);
+    color: #171e42;
+    padding:5px;
+}
+
+.card-body{
+    width:200%;
+}

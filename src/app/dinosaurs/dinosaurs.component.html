@@ -1,25 +1,26 @@
 <h2>Ingen Dinosaurs</h2>
 <ul>
-  <li *ngFor ="let d of dinos" (click)="onSelect(d)">
-    <span><img src="{{d.Image}}" height ="200" width ="200"></span>
-    <span>{{d.Name}}</span> {{d.Rating}}
+  <li *ngFor ="let d of dinos"  >
+    <!--<span class = "Dinos"><img src="{{d.Image}}" height ="300" width ="400"></span>-->
+    <div class="card"  >
+        <span><img src="{{d.Image}}" height ="200" width ="400"></span>        
+        <div class="card-body" >
+          <h4 class="card-title">{{d.Name}}</h4>
+         <nav ng-ref="#seeme" class="btn btn-primary" (click)="onSelect(d)">See Profile</nav>
+        </div>
+      </div>
+      
     
-    <ngb-rating [(rate)]="d.Rating" [starTemplate]= ""  (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating>
   </li>
-
+  <a id ="#seeme"><app-dinosaur-detail [d]= "selectedDino" ></app-dinosaur-detail></a>
 </ul>
-<div class="card" style="width:400px">
-    <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text.</p>
-      <a href="#" class="btn btn-primary">See Profile</a>
-    </div>
-  </div>
+<br>
+<br>
+    
 <hr>
 
 
-<app-dinosaur-detail [d]= "selectedDino" ></app-dinosaur-detail>
+
 <app-messages></app-messages>
 
 

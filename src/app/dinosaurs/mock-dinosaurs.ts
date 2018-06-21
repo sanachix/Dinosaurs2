@@ -9,4 +9,5 @@ export const DINOS: Dinosaur[]=[
     {Name:'Spinosaurus', Rating: 200, Species:'Large Therapod', CombatPotential:'High', Image:'https://cdn-images-1.medium.com/max/1600/1*EY9WqOX6nHbQ9TlVwzsvQw.png'},
     {Name:'Triceratops', Rating: 50, Species:'Ceratopscian', CombatPotential:'Average', Image:'https://i.pinimg.com/originals/50/23/b8/5023b8de24918cb19a5cd516ace584d7.jpg'},
     {Name:'Goat', Rating: 0, Species:'Small Mammal', CombatPotential:'???', Image:'https://static1.gamespot.com/uploads/original/1179/11799911/2840589-goat.jpg'},
+    
 ]

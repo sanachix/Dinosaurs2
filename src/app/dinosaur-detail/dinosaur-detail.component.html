@@ -2,8 +2,12 @@
     <h2>{{d.Name|uppercase}} Summary</h2>
     <div><span>Name: </span>{{d.Name}}</div>
     <div>
-      <label>Name:
-      <input [(ngModel)]="d.Name" placeholder="name">
+      <label>
+        Species: {{d.Species}}
+        <br>
+        Combat Potential: {{d.CombatPotential}}
+        <br>
+        Rating: {{d.Rating}} <ngb-rating [(rate)]="d.Rating" [starTemplate]= ""  (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating>
       </label>
     </div>
   </div>
