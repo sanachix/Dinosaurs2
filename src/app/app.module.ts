@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DinosaursComponent } from './dinosaurs/dinosaurs.component';
 import { DinosaurDetailComponent } from './dinosaur-detail/dinosaur-detail.component';
+import {MessagesComponent} from './dinosaurs/messages/messages.component'
 
 @NgModule({
   imports: [
@@ -31,8 +32,8 @@ import { DinosaurDetailComponent } from './dinosaur-detail/dinosaur-detail.compo
     DinosaursModule,
     AppRoutingModule
   ],
-  declarations: [AppComponent,DinosaursComponent,DinosaurDetailComponent],
-  providers: [
+  declarations: [AppComponent,MessagesComponent,DinosaursComponent,DinosaurDetailComponent],
+  providers: [ 
   ],
   bootstrap: [AppComponent]
 })

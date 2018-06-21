@@ -9,7 +9,7 @@ import {Dinosaur} from '../dinosaurs/dinosaurs'
 })
 export class DinosaurDetailComponent implements OnInit {
 
-  @Input() d:Dinosaur;
+  @Input() d: Dinosaur;
 
   constructor() { }
 

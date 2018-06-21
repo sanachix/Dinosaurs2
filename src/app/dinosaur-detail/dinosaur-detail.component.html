@@ -1,9 +1,9 @@
-<div *ngIf = "selectedDino">
-    <h2>{{selectedDino.Name|uppercase}} Summary</h2>
-    <div><span>Name: </span>{{selectedDino.Name}}</div>
+<div *ngIf = "d">
+    <h2>{{d.Name|uppercase}} Summary</h2>
+    <div><span>Name: </span>{{d.Name}}</div>
     <div>
       <label>Name:
-      <input [(ngModel)]="selectedDino.Name" placeholder="Name">
+      <input [(ngModel)]="d.Name" placeholder="name">
       </label>
     </div>
   </div>
