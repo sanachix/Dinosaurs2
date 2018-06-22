@@ -32,7 +32,7 @@ import {MessagesComponent} from './dinosaurs/messages/messages.component'
     DinosaursModule,
     AppRoutingModule
   ],
-  declarations: [AppComponent,MessagesComponent,DinosaursComponent,DinosaurDetailComponent],
+  declarations: [AppComponent],
   providers: [ 
   ],
   bootstrap: [AppComponent]
