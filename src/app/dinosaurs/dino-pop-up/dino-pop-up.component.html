@@ -1,0 +1,48 @@
+<div id="popup">
+  <h1>DinoSaurs</h1>
+  <ul>
+      <li *ngFor="let dinosaur of dinosaurs">
+          <img [src]="dinosaur.Image"/><br/>
+          <i>{{dinosaur.Name}} {{dinosaur.Rating}}</i><br/>
+          <dx-button
+              class="button-info"
+              text="Details"
+              (onClick)="showInfo(dinosaur)">
+          </dx-button>
+      </li>
+  </ul>
+  <dx-popup
+      class="popup"
+      [width]="300"
+      [height]="250"
+      [showTitle]="true"
+      title="Information"
+      [position]= "{my:'center',at:'bottom', of:'#popup', offset:'100'}"
+      [dragEnabled]="true"
+      [closeOnOutsideClick]="false"
+      [(visible)]="popupVisible">
+      <div *dxTemplate="let data of 'content'">
+          <p>
+              Full Name:
+              <span>{{currentDino.Name}}</span>
+              
+          </p>
+          <p>
+              Birth Date:
+              <span>{{currentDino.Rating}}</span>
+          </p>
+          <p>
+              Address:
+              <span>{{currentDino.Species}}</span>
+          </p>
+          <p>
+              Hire Date:
+              <span>{{currentDino.CombatPotential}}</span>
+          </p>
+          <p>
+              Position:
+              
+          </p>
+      </div>
+  </dx-popup>
+</div>

@@ -13,9 +13,10 @@ import { LoginModule } from './login/login.module';
 import { DinosaursModule} from './dinosaurs/dinosaurs.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DinosaursComponent } from './dinosaurs/dinosaurs.component';
-import { DinosaurDetailComponent } from './dinosaur-detail/dinosaur-detail.component';
-import {MessagesComponent} from './dinosaurs/messages/messages.component'
+import { DinoPopUpModule } from '@app/dinosaurs/dino-pop-up/dino-pop-up.module';
+//import { DinosaursComponent } from './dinosaurs/dinosaurs.component';
+//import { DinosaurDetailComponent } from './dinosaur-detail/dinosaur-detail.component';
+//import {MessagesComponent} from './dinosaurs/messages/messages.component'
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import {MessagesComponent} from './dinosaurs/messages/messages.component'
     AboutModule,
     LoginModule,
     DinosaursModule,
+    DinoPopUpModule,
     AppRoutingModule
   ],
   declarations: [AppComponent],

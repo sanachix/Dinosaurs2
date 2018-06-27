@@ -8,19 +8,26 @@ import { AppComponent } from '@app/app.component';
 import {DinosaurDetailComponent} from '../dinosaur-detail/dinosaur-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { MessagesComponent } from './messages/messages.component'
+import { MessagesComponent } from './messages/messages.component';
+import { DinoPopUpModule } from '@app/dinosaurs/dino-pop-up/dino-pop-up.module';
+import { DinoPopUpComponent } from '@app/dinosaurs/dino-pop-up/dino-pop-up.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     DinosaurRoutingModule,
     TranslateModule,
-    NgbModule
+    NgbModule,
+    DinoPopUpModule
+    
   ],
   declarations: [
     DinosaursComponent,
     DinosaurDetailComponent,
     MessagesComponent,
+   
+
     
   ],
 
