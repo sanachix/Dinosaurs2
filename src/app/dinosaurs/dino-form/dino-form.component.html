@@ -1,4 +1,4 @@
-<form action="your-action"  visible = "true">
+<form action="your-action"(submit)="saveDino2($event)"  visible = "true">
   <dx-form id="dinoform"
       [formData]="dinosaurs"
       [visible]= "true"
@@ -45,15 +45,16 @@
       <dxi-item 
           itemType="button"
           alignment="left"
-          (onClick)="saveDino(dinosaurs)"
+          [buttonOptions]="buttonOptions"
+         
           >
           <!--[buttonOptions]="buttonOptions"-->
       </dxi-item>
      
   </dx-form>
-  <dx-button (onClick)="saveDino(dinosaurs)"
+  <!--<dx-button (onClick)="saveDino(dinosaurs)"
   text="Save"
   type ="success">
    
-</dx-button>
+</dx-button>-->
 </form>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Dinosaur} from './dinosaurs';
 import {DINOS} from './mock-dinosaurs';
-//import {Observable} from 'rxjs' would use but I do not have aserver to take from
+import {Observable, of} from 'rxjs' //would use but I do not have a server to take from
 import {MessagesService} from './messages/messages.service';
 import form from 'devextreme/ui/form';
 
@@ -13,9 +13,9 @@ let dinosaurs:Dinosaur[]=DINOS;
 })
 export class DinosaursService {
 
-  getDinos():Dinosaur[] {
+  getDinos():Observable<Dinosaur[]> {
     this.messageService.add('DinosaursService:fetched dinos')
-    return DINOS
+    return of  (DINOS)
   }
 
   getDino():Dinosaur[]{

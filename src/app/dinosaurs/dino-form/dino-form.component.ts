@@ -5,8 +5,8 @@ import { DinosaursService } from '@app/dinosaurs/dinosaurs.service';
 import { Dinosaur } from '@app/dinosaurs/dinosaurs';
 import { DINOS } from '@app/dinosaurs/mock-dinosaurs';
 import form from 'devextreme/ui/form';
-import DxForm from 'devextreme/ui/form';
-//import notify from 'devextreme/ui/notify';
+//import DxForm from 'devextreme/ui/form';
+import notify from 'devextreme/ui/notify';
 
 
 let test = document.getElementById("dinoform");
@@ -40,8 +40,7 @@ export class DinoFormComponent implements OnInit {
   buttonOptions: any = {
     text: "Save",
     type: "success",
-    
-    //useSubmitBehavior: false
+    useSubmitBehavior: true
 }
 
   constructor(service:DinosaursService) {
@@ -64,10 +63,32 @@ export class DinoFormComponent implements OnInit {
     this.dinos.push({Name:name.option('value'),Rating:rating.option('value'),Species:species.option('value'),
     CombatPotential:combatpotential.option('value'),Image:image.option('value')});
 
-    //this.form.instance.resetValues;
+    this.form.instance.resetValues();
      //this.dino.push({Name:'',Rating:0,Species:'',CombatPotential:'',Image:''})
      //this.dino.push(this.form.formData);
      
+   }
+
+
+   saveDino2 = function(e:any){
+    notify({
+      message: "You have submitted the form",
+      position: {
+          my: "center top",
+          at: "center top"
+      }
+  }, "success", 3000);
+    var name = this.form.instance.instance().getEditor("Name");
+    var rating = this.form.instance.instance().getEditor("Rating");
+    var species = this.form.instance.instance().getEditor("Species");
+    var combatpotential = this.form.instance.instance().getEditor("Combat Potential");
+    var image = this.form.instance.instance().getEditor("Image");
+    
+    this.dinos.push({Name:name.option('value'),Rating:rating.option('value'),Species:species.option('value'),
+    CombatPotential:combatpotential.option('value'),Image:image.option('value')});
+
+    this.form.instance.resetValues();
+  e.preventDefault();
    }
    
   ngOnInit() {

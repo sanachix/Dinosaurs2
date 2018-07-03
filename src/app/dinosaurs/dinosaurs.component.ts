@@ -14,9 +14,6 @@ import {NgbRatingConfig} from '@ng-bootstrap/ng-bootstrap'
 export class DinosaursComponent implements OnInit {
   dinos: Dinosaur[];
   
-  readonly= true;
-
-  x='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD51qe04dODwa1JL637QthycJaeU3tU76U7U8pPwCVC-9TuSie'
 
   selectedDino: Dinosaur;
 
@@ -25,7 +22,9 @@ export class DinosaursComponent implements OnInit {
   }
 
   getDinos():void{
-   this.dinos=this.dinosaursService.getDinos()
+   this.dinosaursService.getDinos().
+   subscribe(dinos => this.dinos = dinos)
+
   }
 
   ngOnInit() {
