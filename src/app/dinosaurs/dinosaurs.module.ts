@@ -10,7 +10,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MessagesComponent } from './messages/messages.component';
 import { DinoPopUpModule } from '@app/dinosaurs/dino-pop-up/dino-pop-up.module';
-import { DinoPopUpComponent } from '@app/dinosaurs/dino-pop-up/dino-pop-up.component';
+import { DinoFromModule } from '@app/dinosaurs/dino-form/dino-from.module';
+//import { DinoPopUpComponent } from '@app/dinosaurs/dino-pop-up/dino-pop-up.component';
+//import { DinoFormComponent } from './dino-form/dino-form.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { DinoPopUpComponent } from '@app/dinosaurs/dino-pop-up/dino-pop-up.compo
     DinosaurRoutingModule,
     TranslateModule,
     NgbModule,
-    DinoPopUpModule
+    DinoPopUpModule,
+    DinoFromModule
+  
     
   ],
   declarations: [

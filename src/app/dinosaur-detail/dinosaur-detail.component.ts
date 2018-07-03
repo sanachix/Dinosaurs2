@@ -9,6 +9,7 @@ import {Dinosaur} from '../dinosaurs/dinosaurs'
 })
 export class DinosaurDetailComponent implements OnInit {
 
+  readonly= true;
   @Input() d: Dinosaur;
 
   constructor() { }

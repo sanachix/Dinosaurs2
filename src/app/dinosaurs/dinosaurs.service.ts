@@ -3,8 +3,10 @@ import {Dinosaur} from './dinosaurs';
 import {DINOS} from './mock-dinosaurs';
 //import {Observable} from 'rxjs' would use but I do not have aserver to take from
 import {MessagesService} from './messages/messages.service';
+import form from 'devextreme/ui/form';
 
 let dinosaurs:Dinosaur[]=DINOS; 
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +21,7 @@ export class DinosaursService {
   getDino():Dinosaur[]{
     return dinosaurs
   }
+
+
   constructor(private messageService: MessagesService) { }
 }

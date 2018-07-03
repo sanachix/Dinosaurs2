@@ -14,6 +14,7 @@ import { DinosaursModule} from './dinosaurs/dinosaurs.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DinoPopUpModule } from '@app/dinosaurs/dino-pop-up/dino-pop-up.module';
+import { DinoFromModule } from '@app/dinosaurs/dino-form/dino-from.module';
 //import { DinosaursComponent } from './dinosaurs/dinosaurs.component';
 //import { DinosaurDetailComponent } from './dinosaur-detail/dinosaur-detail.component';
 //import {MessagesComponent} from './dinosaurs/messages/messages.component'
@@ -32,7 +33,8 @@ import { DinoPopUpModule } from '@app/dinosaurs/dino-pop-up/dino-pop-up.module';
     LoginModule,
     DinosaursModule,
     DinoPopUpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DinoFromModule
   ],
   declarations: [AppComponent],
   providers: [ 

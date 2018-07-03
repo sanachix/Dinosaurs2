@@ -1,0 +1,59 @@
+<form action="your-action"  visible = "true">
+  <dx-form id="dinoform"
+      [formData]="dinosaurs"
+      [visible]= "true"
+      [readOnly]="false"
+      [showColonAfterLabel]="true"
+      [showValidationSummary]="true"
+      validationGroup="customerData">
+      
+      <dx-data-grid
+          id="gridContainer"
+          [dataSource]="dinosaurs"
+          >
+      </dx-data-grid>
+     
+      <dxi-item itemType="group" caption="Personal Data">
+          <dxi-item dataField="Name" dataType= "string" visible = "true">
+              
+          </dxi-item>
+
+          <dxi-item dataField="Rating" dataType= "number" visible = "true" >
+            
+        </dxi-item>
+
+        <dxi-item dataField="Species" dataType= "string" visible = "true" >
+          
+          
+      </dxi-item>
+ 
+      <dxi-item dataField="Combat Potential" dataType= "string" visible = "true" >
+          
+          
+      </dxi-item>
+
+      <dxi-item dataField="Image" dataType= "string" visible = "true" >
+          
+          
+      </dxi-item>
+
+        
+         
+      </dxi-item>
+      
+
+      <dxi-item 
+          itemType="button"
+          alignment="left"
+          (onClick)="saveDino(dinosaurs)"
+          >
+          <!--[buttonOptions]="buttonOptions"-->
+      </dxi-item>
+     
+  </dx-form>
+  <dx-button (onClick)="saveDino(dinosaurs)"
+  text="Save"
+  type ="success">
+   
+</dx-button>
+</form>

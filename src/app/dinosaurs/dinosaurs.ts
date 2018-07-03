@@ -4,4 +4,6 @@ export class Dinosaur{
     Species: string;
     CombatPotential: string;
     Image: string
+
+   
 }

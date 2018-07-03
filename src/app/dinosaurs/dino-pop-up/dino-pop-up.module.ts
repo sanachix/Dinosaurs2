@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DxPopupModule, DxButtonModule, DxTemplateModule } from 'devextreme-angular';
 import { DinoPopUpRouterModule } from '@app/dinosaurs/dino-pop-up/dino-pop-up-router.module';
 import { bind } from '@angular/core/src/render3/instructions';
+import { DinoFromModule } from '@app/dinosaurs/dino-form/dino-from.module';
 //import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 if(!/localhost/.test(document.location.host)) {
@@ -18,7 +19,8 @@ if(!/localhost/.test(document.location.host)) {
     DinoPopUpRouterModule,
     DxPopupModule,
     DxButtonModule,
-    DxTemplateModule
+    DxTemplateModule,
+    //DinoFromModule
   ],
 
   exports:[
